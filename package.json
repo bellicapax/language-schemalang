@@ -1,6 +1,6 @@
 {
   "name": "language-schemalang",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Atom language support for SpatialOS Schemalang .schema files",
   "engines": {
     "atom": "*"
