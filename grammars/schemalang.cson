@@ -1,0 +1,65 @@
+'scopeName': 'source.schemalang'
+'name': 'Schemalang'
+'fileTypes': ['schema']
+
+'patterns': [
+	{ # Numbers
+		'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+		'name': 'constant.numeric.schemalang'
+	},
+	{ # DataTypes
+		'match': '\\b((((u|s)?int|s?fixed)(32|64))|bool|id|float|double|string|bytes|Coordinates|Vector3d|Vector3f|EntityId|EntityPosition)\\b'
+		'name': 'storage.type.schemalang'
+	},
+	{ # Comment line
+		'begin': '//'
+		'end': '$'
+		'name': 'comment.line.double-slash.schemalang'
+	},
+	{ # Comment block
+		'begin': '/\\*'
+		'end': '\\*/'
+		'name': 'comment.line.block.schemalang'
+	},
+	{ # Keywords
+		'match': '\\b(package|import|command|event|data)\\s+'
+		'name': 'keyword.other.schemalang'
+	},
+	{ # Modifiers
+		'match': '\\b(transient)\\s+'
+		'name': 'storage.modifier.schemalang'
+	},
+	{ # enum
+		'match': '\\b(enum)\\s+(\\w+)\\s*\\{'
+		'captures':
+			'1':
+				'name': 'storage.type.schemalang'
+			'2':
+				'name': 'entity.name.type.schemalang'
+		'name': 'meta.enum.schemalang'
+	},
+	{ # type
+		'match': '\\b(type)\\s+(\\w+)\\s*\\{'
+		'captures':
+			'1':
+				'name': 'support.class.schemalang'
+			'2':
+				'name': 'entity.name.class.schemalang'
+		'name': 'meta.type.schemalang'
+	},
+	{ # component
+		'match': '\\b(component)\\s+(\\w+)\\s*\\{'
+		'captures':
+			'1':
+				'name': 'support.class.schemalang'
+			'2':
+				'name': 'entity.name.class.schemalang'
+		'name': 'meta.component.schemalang'
+	},
+	{
+		'match': '\\b(option|list|map)\\s*<'
+		'captures':
+			'1':
+				'name': 'support.class.collections.schemalang'
+	}
+]

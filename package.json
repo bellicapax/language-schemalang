@@ -1,0 +1,17 @@
+{
+  "name": "language-schemalang",
+  "version": "0.0.0",
+  "description": "Atom language support for SpatialOS Schemalang .schema files",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bellicapax/language-schemalang.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bellicapax/language-schemalang/issues"
+  },
+  "license": "MIT"
+}
